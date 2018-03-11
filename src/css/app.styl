@@ -15,9 +15,22 @@ body
   display grid
   // grid-template-columns 25% 200px 25%
   // grid-template-rows 300px 150px
-  grid-template 300px 150px / 25% 200px 25%
+  grid-column-gap 20px
+  grid-row-gap 20px
+  grid-template 300px 150px / 50% 200px 25%
 
 .item
   background lightblue
   border 1px solid red
+  // margin-right 20px
   padding 10px
+
+  &:nth-of-type(4)
+    background lightcoral
+    // display subgrid repite el grid padre (aún no estásoportado)
+    display grid
+    grid-template 300px 150px / 25% 200px 25%
+    overflow auto // Esto añade un scroll si el elemento lo necesita
+
+  & .item
+    background lavender
