@@ -1,0 +1,108 @@
+// ************************************************
+// Estilos base para animación
+// ************************************************
+@import "lib/_variables.styl"
+@import "lib/_mixins.styl"
+
+
+
+html
+  background color-background
+  font-size 87.5%
+
+
+  body
+    background-color fondo
+    font-family base-font-family
+    font-size 40px
+    // justify-content center
+    margin 0
+    min-height 100vh
+
+    +below(768px)
+      background lightcoral
+
+
+  container
+    align-items center
+    // background-color #fff
+    display flex
+    justify-content center
+    height 25vh
+    mixin-max-width()
+
+  .diamante
+    border-color transparent transparent red transparent
+    border-style solid
+    border-width 0 25px 25px 25px
+    height 0
+    margin 20px 0 50px 0
+    position relative
+    width 50px
+
+    &:after
+      border-color red transparent transparent transparent
+      border-style solid
+      border-width 70px 50px
+      content ""
+      height 0
+      left -25px
+      position absolute
+      top 25px
+      width 0
+
+  .PLatziLogo
+    animation-duration 4s
+    animation-name logo
+    height 100px
+    position relative
+    transform rotate(45deg)
+    width 100px
+
+    &-title
+      color white
+      font-family "Open Sans", Sans-serif
+      font-size 100px
+      font-weight 600
+      margin-left 20px
+
+    &-left
+      border 15px solid #97c93e
+      border-bottom none
+      border-radius 10px 10px 0 0
+      box-sizing border-box
+      height 65%
+      position relative
+      top 1px
+      width 85%
+
+    &-right
+      border 15px solid #97c93e
+      border-radius 0 0 10px 10px
+      border-top none
+      box-sizing border-box
+      height 35%
+      position relative
+      width 100%
+
+  .punto
+    border 15px solid #7681c9
+    border-radius 50%
+
+  .title
+    text-align center
+
+
+  @keyframes logo
+    0%
+      opacity 0%
+      transform scale(.1) rotate(25deg)
+    50%
+      opacity 50%
+      transform scale(1) rotate(425deg)
+    80%
+      opacity 100%
+      transform scale(1) rotate(390deg)
+    100%
+      opacity 100%
+      transform scale(1) rotate(405deg)

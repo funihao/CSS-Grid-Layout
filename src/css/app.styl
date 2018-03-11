@@ -1,0 +1,23 @@
+@import "lib/_variables.styl"
+// @import "lib/_mixins.styl"
+
+
+body
+  background-color fondo
+  font-family base-font-family
+  font-size 20px
+  // justify-content center
+  margin 0
+  min-height 100vh
+
+
+.container
+  display grid
+  // grid-template-columns 25% 200px 25%
+  // grid-template-rows 300px 150px
+  grid-template 300px 150px / 25% 200px 25%
+
+.item
+  background lightblue
+  border 1px solid red
+  padding 10px
