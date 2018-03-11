@@ -14,7 +14,7 @@ En forma condensada:
 ```css
 .container
   display: grid;
-  // grid-template: rows / columns
+  // grid-template: rows / columns;
   grid-template: 300px 150px / 25% 200px 25%;
 
 ```
@@ -27,18 +27,50 @@ Para conseguir el espaciado de los elementos del layout podemos usar la propieda
 
 ```css
 .container
-  display: grid
-  grid-template: 300px 150px / 50% 200px 25%
-  grid-column-gap: 20px
-  grid-row-gap: 20px
+  display: grid;
+  grid-template: 300px 150px / 50% 200px 25%;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 
 ```
 
 ```css
 .container
-  display: grid
-  grid-template: 300px 150px / 50% 200px 25%
-  // grid-gap: row / column
-  grid-gap: 20px / 20px
+  display: grid;
+  grid-template: 300px 150px / 50% 200px 25%;
+  // grid-gap: row / column;
+  grid-gap: 20px / 20px;
+
+```
+
+## Fracciones y Funciones
+Asi como tenemos pixels, porcentajes, etc.; *CSS Grid* nos proporciona una nueva medida, las fracciones, designadas por `fr`.
+
+```css
+.container
+  display: grid;
+  // grid-template: 300px 150px / 50% 200px 25%;
+  grid-template: 300px 150px / 1fr 1fr 1fr;
+  grid-gap: 20px / 20px;
+
+```
+O también, en automático.
+
+```css
+.container
+  display: grid;
+  // grid-template: 300px 150px / 1fr 1fr 1fr
+  grid-template: 300px 150px / auto auto auto;
+  grid-gap: 20px / 20px;
+
+```
+
+*Grid Layout* nos proporciona un par de funciones para facilitarnos la tarea de crear layout. Cuando tenemos que repetir columnas o filas podemos usar la función `repeat(num, size)`. También podemos usar la función `minmax(min, max)` para determinar los valores máximo y mínimo de los elementos. Grid tratara de mantenerse en esos extremos siendo responsivo.
+
+```css
+.container
+  display: grid;
+  grid-template: 300px 150px / repeat(4, minmax(200px, 1fr));
+  grid-gap: 20px / 20px;
 
 ```
