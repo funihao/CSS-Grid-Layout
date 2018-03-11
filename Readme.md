@@ -4,7 +4,7 @@ Para controlar nuestros layout mediante "CSS Grid Layout" es muy sencillo. Prime
 ```css
 .container
   display: grid;
-  grid-tempalte-columns: 25% 200px 25%;
+  grid-template-columns: 25% 200px 25%;
   grid-template-rows: 300px 150px;
 
 ```
@@ -14,6 +14,6 @@ En forma condensada:
 ```css
 .container
   display: grid;
-  grid-tempalte: 300px 150px / 25% 200px 25%;
+  grid-template: 300px 150px / 25% 200px 25%;
 
 ```
