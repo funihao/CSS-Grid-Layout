@@ -74,3 +74,30 @@ O también, en automático.
   grid-gap: 20px / 20px;
 
 ```
+
+## Áreas de contenido
+Definimos el layout de un área en el contenedor padre mediante `grid-template-areas` y luego se relaciona con el elemento que ocupará una área.
+
+```css
+.container
+  display: grid;
+  grid-template: 100px 1fr 150px / 200px 1fr;
+  grid-template-areas: "header header"
+                       "left content"
+                       "footer footer";
+  grid-gap: 10px / 10px;
+
+
+.header
+  grid-area: header;
+
+.left
+  grid-area: left;
+
+.content
+  grid-area: content;
+
+.footer
+  grid-area: footer;
+
+```
