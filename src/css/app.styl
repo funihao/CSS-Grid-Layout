@@ -13,40 +13,35 @@ body
 
 .container
   display grid
-  grid-column-gap 10px
-  grid-row-gap 10px
-  grid-template 100px 1fr 150px / 200px 1fr
-  grid-template-areas "header header" "left content" "footer footer"
+  grid-gap 2px
   height 100vh
 
+@css {
+  .container {
+    // grid-template-columns: 1fr 1fr  1fr 1fr 1fr 1fr 1fr;
+    // grid-template-rows: [lf1] 200px [lf2] 200px [fin-f];
+    grid-template-columns: [inicio] 1fr [lc2] 1fr [lc3] 1fr [fin-dest] 1fr [lc5] 1fr [lc6] 1fr [lc7] 1fr [fin-c];
+    grid-template-rows: [lf1] 200px [lf2] 200px [fin-f];
+  }
+}
 
-.item
-  background lightblue
-  border 1px solid red
-  // margin-right 20px
-  padding 10px
+@css {
+  .item {
+    background: lightblue;
+    border: 1px solid red;
+    padding: 10px;
+  }
 
-  &:nth-of-type(4)
-    background lightcoral
-    // display subgrid repite el grid padre (aún no estásoportado)
-    display grid
-    grid-template 50px 50px / 25% 50% 25%
-    overflow auto // Esto añade un scroll si el elemento lo necesita
+  .item:nth-of-type(1) {
+    background: lightcoral;
+    grid-column: inicio / fin-dest;
+    grid-row: lf1 / span 2;}
 
-  & .item
-    background lavender
+  .item:nth-of-type(2) {
+    grid-column: fin-dest / lc6;
+    grid-row: lf1 / fin-f;}
 
-
-.header
-  grid-area header
-
-.left
-  grid-area left
-
-
-.content
-  grid-area content
-
-
-.footer
-  grid-area footer
+  .item:nth-of-type(3) {
+    background: lightcoral;
+    grid-column: lc6 / fin-c;}
+}
