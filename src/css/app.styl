@@ -13,18 +13,12 @@ body
 
 .container
   display grid
-  // grid-template-columns 25% 200px 25%
-  // grid-template-rows 300px 150px
-  grid-column-gap 20px
-  grid-row-gap 20px
+  grid-column-gap 10px
+  grid-row-gap 10px
+  grid-template 100px 1fr 150px / 200px 1fr
+  grid-template-areas "header header" "left content" "footer footer"
   height 100vh
-  // grid-template 300px 150px / 1fr 1fr 1fr
-  // grid-template 300px 150px / auto auto auto
-@css {
-  .container {
-    grid-template: repeat(3, 1fr) / repeat(4, minmax(200px, 1fr));
-  }
-}
+
 
 .item
   background lightblue
@@ -41,3 +35,18 @@ body
 
   & .item
     background lavender
+
+
+.header
+  grid-area header
+
+.left
+  grid-area left
+
+
+.content
+  grid-area content
+
+
+.footer
+  grid-area footer
