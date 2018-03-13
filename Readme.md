@@ -154,7 +154,7 @@ Cada uno de los `item`'s los controlamos mediante **`grid-column-start`**, **`gr
 ```
 
 Lo anterior lo podemos realizar poniendo nombres a las líneas de que separan las columnas y/o filas:
-  > **Nota**: _Stylus_ no reconoce la asignación de nombres en los grid's. Tampoco reconoce las funciones `repeat()`,`minmax()`.Por lo que usando _Stylus_, esnecesario marcarlo como css literal mediante `@css {}`.
+  > **Nota**: _Stylus_ no reconoce la asignación de nombres en los grid's. Tampoco reconoce las funciones `repeat()`,`minmax()`. Por lo que usando _Stylus_, es necesario marcarlo como css literal mediante `@css {}`.
 
   ```css
   .container {
@@ -184,3 +184,44 @@ Lo anterior lo podemos realizar poniendo nombres a las líneas de que separan la
     background: lightcoral;
     grid-column: lc6 / fin-c;}
   ```
+## Manejando el grid implícito
+Como ya se ha podido observar **_CSS Grid_** va colocando todos los elementos según se especifíca y todo aquello que sobra o desborda lo pasa por defecto a una nueva fila. A esto se le conoce como grid ímplicito y es la forma en que va ordenando todo aquello que sobra o no tiene definición explícita.
+
+El grid implícito lo podemos controlar mediante un par de propiedades. Con **`grid-auto-flow`** definimos como se van a tratar los elementos "_sobrantes"_. Por defecto se tratan pasandolos a una nueva fila pero podríamos apilarlos en columnas estableciendo `grid-auto-flow: column;`.
+
+Vamos a añadir mas columnas para ver el efecto:
+```pug
+section
+  .container
+    .item Contenido #1
+    .item Contenido #2
+    .item Contenido #3
+    .item Contenido #4
+    .item Contenido #5
+    .item Contenido #6
+    .item Contenido #7
+    .item Contenido #8
+    .item Contenido #9
+    .item Contenido #10
+    .item Contenido #11
+    .item Contenido #12
+```
+
+Ahora vamos a cambiar el tratamiento por defecto para que coloque los elementos por columnas:
+
+```css
+.container {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: [inicio] 1fr [lc2] 1fr [lc3] 1fr [fin-dest] 1fr [lc5] 1fr [lc6] 1fr [lc7] 1fr [fin-c];
+  grid-template-rows: [lf1] 200px [lf2] 200px [fin-f];
+  height: 100vh;
+
+  grid-auto-flow: column;
+}
+```
+
+Las columnas a partir de la sexta no tienen una definición explícita, así que las va colocando a la derecha y en dos filas, asignándole un espacio mínimo para albergar el contenido.
+Si cambiamos `grid-auto-flow: column;` por `grid-auto-flow: row;`, veremos como vuelve al comportamiento por defecto, colocando los elementos por filas y pasando a una nueva fila los elementos a partir del sexto.
+
+También podemos definir un espacio para las nuevas columnas o filas donde se colocaran los elementos que no tienen una definición explicita. Probemos con `grid-auto-colums: 100px 50px;` para definir dos anchos de columnas si tenemos `grid-auto-flow: column;` o `grid-auto-rows: 100px 50px;` si estamos manejando el grid implícito por filas.
