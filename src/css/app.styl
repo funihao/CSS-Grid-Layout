@@ -13,13 +13,13 @@ body
 
 .container
   display grid
+  grid-auto-colums 100px 50px
+  grid-auto-flow column
   grid-gap 2px
   height 100vh
 
 @css {
   .container {
-    // grid-template-columns: 1fr 1fr  1fr 1fr 1fr 1fr 1fr;
-    // grid-template-rows: [lf1] 200px [lf2] 200px [fin-f];
     grid-template-columns: [inicio] 1fr [lc2] 1fr [lc3] 1fr [fin-dest] 1fr [lc5] 1fr [lc6] 1fr [lc7] 1fr [fin-c];
     grid-template-rows: [lf1] 200px [lf2] 200px [fin-f];
   }
