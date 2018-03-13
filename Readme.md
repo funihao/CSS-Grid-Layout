@@ -225,3 +225,44 @@ Las columnas a partir de la sexta no tienen una definición explícita, así que
 Si cambiamos `grid-auto-flow: column;` por `grid-auto-flow: row;`, veremos como vuelve al comportamiento por defecto, colocando los elementos por filas y pasando a una nueva fila los elementos a partir del sexto.
 
 También podemos definir un espacio para las nuevas columnas o filas donde se colocaran los elementos que no tienen una definición explicita. Probemos con `grid-auto-colums: 100px 50px;` para definir dos anchos de columnas si tenemos `grid-auto-flow: column;` o `grid-auto-rows: 100px 50px;` si estamos manejando el grid implícito por filas.
+
+## Alineando el Contenido
+Para alinear el contenido dentro de su espacio continente, _**CSS Grid**_ nos proporciona un par de propiedades. Podemos alinear el contenido de todos los elementos si en el padre (el contenedor) utilizamos las propiedades **`justify-items`** y **`align-items`**. La primera para la posición horizontal y la segunda para la posición vertical (parecido a como lo hacemos con `flex-box`), tomando los valores **`start|end|center|strech`**. Este último es el valor por defecto. Creemos una plantilla con 12 elementos, como en la lección anterior y juguemos con esos valores a ver que pasa.
+
+```pug
+section
+  .container
+    .item Contenido #1
+    .item Contenido #2
+    .item Contenido #3
+    .item Contenido #4
+    .item Contenido #5
+    .item Contenido #6
+    .item Contenido #7
+    .item Contenido #8
+    .item Contenido #9
+    .item Contenido #10
+    .item Contenido #11
+    .item Contenido #12
+```
+
+
+```css
+.container {
+  display: grid;
+  grid-gap: 2px;
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  height: 100vh;
+
+  justify-items: center; // start|end|center|strech
+  align-items: center;   // start|end|center|strech
+}
+```
+Para controlar el posicionamiento de cada uno de los elementos dentro espacio asignado podemos usar las propiedades **`justify-self`** y **`align-self`** tomando los mismos valores que para el contenedor padre, **`start|end|center|strech`**. Añadimos estas propiedades a las clases de los elementos que deseamos controlar y juguemos con ellas.
+
+```css
+.item:nth-of-type(3) {
+  background: lightcoral;
+  align-self: start;      // start|end|center|strech
+  justify-self: end;      // start|end|center|strech
+```
