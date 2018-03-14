@@ -4,7 +4,7 @@
   "description": "Curso CSS Grid Layout",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --host 192.168.1.91 ",
+    "dev": "webpack-dev-server --open --host 192.168.1.91",
     "build": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +25,7 @@
     "stylint": "^1.5.9",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
+    "url-loader": "^1.0.1",
     "webpack": "3.10.0",
     "webpack-dev-server": "2.11.1"
   }

@@ -20,6 +20,17 @@ module.exports = {
       //   })
       // },
       {
+        test: /\.(jpg|gif|png|woff|eot|ttf|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 100000,
+            }
+          }
+        ]
+      },
+      {
         test: /\.styl$/,
         use: ExtractTextPlugin.extract({
           use: [

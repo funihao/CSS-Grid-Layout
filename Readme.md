@@ -265,4 +265,21 @@ Para controlar el posicionamiento de cada uno de los elementos dentro espacio as
   background: lightcoral;
   align-self: start;      // start|end|center|strech
   justify-self: end;      // start|end|center|strech
+}
+```
+
+## Alineando filas y columnas
+En la lección anterior hemos jugado con la alineación del contenido dentro de cada uno de los elementos pero también podemos controlar la alineación de los elementos entre sí. Para esto tenemos las propiedades: **`justify-content`** y **`align-content`** con los valores **`start|end|center|strech|space-around|space-between|space-evenly`**. Estas propiedades se deben aplicar en el contenedor padre.
+
+```css
+.container {
+  display: grid;
+  grid-gap: 2px;
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  height: 100vh;
+
+  justify-content: center; // start|end|center|strech|space-around|
+                           // space-between|space-evenly
+  align-content: space-evenly;   
+}
 ```
