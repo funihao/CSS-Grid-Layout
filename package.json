@@ -4,7 +4,7 @@
   "description": "Curso CSS Grid Layout",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --host 192.168.1.91 ",
+    "dev": "webpack-dev-server --open",
     "build": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

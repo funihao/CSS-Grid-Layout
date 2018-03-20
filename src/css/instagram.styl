@@ -1,0 +1,56 @@
+body
+  font-family Arial
+  margin 0
+
+@css {
+  .post-list {
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+
+  }
+}
+
+
+.post
+  cursor pointer
+  display block
+  position relative
+
+  &-list
+    display grid
+    justify-content center
+    grid-gap 28px
+
+  &-image
+    margin 0
+
+    & img
+      vertical-align top
+      width 100%
+
+  &-overlay
+    align-items center
+    background rgba(0,0,0, .4)
+    bottom 0
+    color white
+    display none
+    justify-content center
+    left 0
+    position absolute
+    right 0
+    text-align center
+    top 0
+
+
+  &:hover .post-overlay
+    display flex
+
+
+  &-likes
+  &-comments
+    font-weight bold
+    margin 5px
+    width 80px
+
+@media screen and (max-width 768px)
+  .post-list
+    grid-gap 3px

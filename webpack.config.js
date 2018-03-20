@@ -61,7 +61,7 @@ module.exports = {
   ],
 
   devServer: {
-    // hot: true
-    contentBase: "http://192.168.1.91"
+    // // hot: true
+    // contentBase: "http://192.168.1.91"
   }
 }
