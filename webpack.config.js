@@ -19,17 +19,17 @@ module.exports = {
       //     use: 'css-loader'
       //   })
       // },
-      {
-        test: /\.(jpg|gif|png|woff|eot|ttf|svg)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 100000,
-            }
-          }
-        ]
-      },
+      // {
+      //   test: /\.(jpg|gif|png|woff|eot|ttf|svg)$/,
+      //   use: [
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         limit: 100000,
+      //       }
+      //     }
+      //   ]
+      // },
       {
         test: /\.styl$/,
         use: ExtractTextPlugin.extract({
@@ -73,6 +73,6 @@ module.exports = {
 
   devServer: {
     // hot: true
-    contentBase: "http://192.168.1.91"
+    // contentBase: "http://192.168.1.91"
   }
 }
