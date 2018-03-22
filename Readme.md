@@ -1,5 +1,20 @@
-# Curso CSS Grid Layout
-Para controlar nuestros layout mediante "CSS Grid Layout" es muy sencillo. Primero un contenedor que va a contener nuestro layout. Le damos la propiedad `display: grid`. A partir de aquí controlamos las filas y columnas medinte las propiedades: `grid-template-columns` y `grid-template-rows`.
+# Curso CSS Grid Layout ([Platzi](https://platzi.com/))
+Este es mi repositorio personal del curso de **[Platzi](https://platzi.com/)** pero realizado con **webpack**, ***stylus*** y **pug**.
+
+<div align="center">
+  <a href="https://webpack.js.org">
+    <img width="100" height="100" align="center" src="https://webpack.js.org/assets/icon-square-big.svg">&nbsp;
+  </a>
+  <a href="http://stylus-lang.com">
+    <img width="100" height="100 align="center"" src="http://stylus-lang.com/img/stylus-logo.svg">
+  </a>&nbsp;
+<a href="https://pugjs.org"><img src="https://cdn.rawgit.com/pugjs/pug-logo/eec436cee8fd9d1726d7839cbe99d1f694692c0c/SVG/pug-final-logo-_-colour-128.svg" height="100" align="center"></a>  
+<br>
+</div>
+
+Las últimas clases con los ejercicios prácticos están cada una en una rama, [instagram](https://github.com/funihao/CSS-Grid-Layout/tree/instagram), [pinterest](https://github.com/funihao/CSS-Grid-Layout/tree/pinterest) y [platzi](https://github.com/funihao/CSS-Grid-Layout/tree/platzi). Los desafíos en próximas ramas ...
+
+Controlar nuestros layouts mediante "CSS Grid Layout" es muy sencillo. Primero necesitamos un contenedor que va a contener nuestro layout. Le damos la propiedad `display: grid`. A partir de aquí controlamos las filas y columnas medinte las propiedades: `grid-template-columns` y `grid-template-rows`.
 
 ```Stylus
 .container
@@ -20,10 +35,10 @@ En forma condensada:
 ```
 
 ## Displays
-Grid Layout va a traer nuevos `displays`, como repetir el grid del padre en una celda hijo, `display: subgrid` repetirá todo el grid del padre. Vendrán mas tipos de _displays_ pero eso será en el futuro.
+_Grid Layout_ va a traer nuevos `displays`, como repetir el grid del padre en una celda hijo, `display: subgrid` repetirá todo el grid del padre. Vendrán mas tipos de __*displays*__ pero eso será en el futuro.
 
 ## Espaciado
-Para conseguir el espaciado de los elementos del layout podemos usar la propiedad `margin`. Pero *grid Layout* nos trae un mejor modo de espaciar los diferentes elementos. La forma de hacerlo es con `grid-column-gap` y `grid-row-gap` o en modo compacto, `grid-gap`.
+Para conseguir el espaciado de los elementos del layout podemos usar la propiedad `margin`. Pero _Grid Layout_ nos trae un mejor modo de espaciar los diferentes elementos. La forma de hacerlo es con `grid-column-gap` y `grid-row-gap` o en modo compacto, `grid-gap`.
 
 ```Stylus
 .container
@@ -265,4 +280,21 @@ Para controlar el posicionamiento de cada uno de los elementos dentro espacio as
   background: lightcoral;
   align-self: start;      // start|end|center|strech
   justify-self: end;      // start|end|center|strech
+}
+```
+
+## Alineando filas y columnas
+En la lección anterior hemos jugado con la alineación del contenido dentro de cada uno de los elementos pero también podemos controlar la alineación de los elementos entre sí. Para esto tenemos las propiedades: **`justify-content`** y **`align-content`** con los valores **`start|end|center|strech|space-around|space-between|space-evenly`**. Estas propiedades se deben aplicar en el contenedor padre.
+
+```css
+.container {
+  display: grid;
+  grid-gap: 2px;
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  height: 100vh;
+
+  justify-content: center; // start|end|center|strech|space-around|
+                           // space-between|space-evenly
+  align-content: space-evenly;   
+}
 ```
