@@ -7,7 +7,7 @@ Este es mi repositorio personal del curso de **[Platzi](https://platzi.com/)** p
   </a>
   <a href="http://stylus-lang.com">
     <img width="100" height="100 align="center"" src="http://stylus-lang.com/img/stylus-logo.svg">
-  </a>&nbsp;
+  </a>&nbsp; 
 <a href="https://pugjs.org"><img src="https://cdn.rawgit.com/pugjs/pug-logo/eec436cee8fd9d1726d7839cbe99d1f694692c0c/SVG/pug-final-logo-_-colour-128.svg" height="100" align="center"></a>  
 <br>
 </div>
