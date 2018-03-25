@@ -1,4 +1,4 @@
-import './css/app.styl'
+import './css/movies.styl'
 var html = require('./index.pug')
 
-console.log('Pinterest Layout')
+console.log('Movi.es Layout')
