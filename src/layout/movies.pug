@@ -1,6 +1,6 @@
 section
   .container
-    .header 
+    .header
       .brand-logo
         img(src="src/images/popcorn.png").brand-logo__img
         //- figure.brand-logo__img
@@ -11,13 +11,20 @@ section
         form(action="").search-form
           input(type="email", size="30", placeholder="Busca tu peli, actor, actriz o director favorito").search-input
       
-      a(href="#").user
-        .user__text Bambi rodríguez
-        .user__img
-          img(src="src/images/bambi.jpg")
-        .user__arrow
-      
+      #menu
+        #menu-bar.burger
+          .burger-inner
+            //- a(href="#").user-mov
+            //-   span
+        a(href="#").user
+          .user__text Bambi rodríguez
+          .user__img
+            img(src="src/images/bambi.jpg")
+          .user__arrow
+        
+        
     .side-bar
+      .bar &gt;
       .main-menu
         .home
           p.icon
@@ -38,70 +45,72 @@ section
             span.icon-settings
               p.label Ajustes
     
+
     .post
-      .post-list
-        .post-group Ahora en el cine
-        a(href="#").post-item
-          figure.post-image
-            img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
-          span.post-overlay
-            h2 The Secret Live  of Pets
-            p The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
-        a(href="#").post-item
-          figure.post-image
-            img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
-          span.post-overlay
-            h2 The Secret Live  of Pets
-            p
-              span.post-likes The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
-        a(href="#").post-item
-          figure.post-image
-            img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
-          span.post-overlay
-            h2 The Secret Live  of Pets
-            p
-              span.post-likes The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
-        .post-group Aclamadas por la crítica
-        a(href="#").post-item
-          figure.post-image
-            img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
-          span.post-overlay
-            h2 The Secret Live  of Pets
-            p
-              span.post-likes The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
-        a(href="#").post-item
-          figure.post-image
-            img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
-          span.post-overlay
-            h2 The Secret Live  of Pets
-            p
-              span.post-likes The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
-        a(href="#").post-item
-          figure.post-image
-            img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
-          span.post-overlay
-            h2 The Secret Live  of Pets
-            p
-              span.post-likes The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
-        .post-group No te debes perder
-        a(href="#").post-item
-          figure.post-image
-            img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
-          span.post-overlay
-            h2 The Secret Live  of Pets
-            p
-              span.post-likes The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
-        a(href="#").post-item
-          figure.post-image
-            img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
-          span.post-overlay
-            h2 The Secret Live  of Pets
-            p
-              span.post-likes The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
-        a(href="#").post-item
-          figure.post-image
-            img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
-          span.post-overlay
-            h2 The Secret Live  of Pets
-            p
-              span.post-likes The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
+      .post-section
+        //- .mov-bar
+        p Ahora en el cine
+
+      a(href="#").post-item
+        figure.post-image
+          img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
+        span.post-overlay
+          h2 The Secret Live  of Pets
+          p The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
+
+      a(href="#").post-item
+        figure.post-image
+          img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
+        span.post-overlay
+          h2 The Secret Live  of Pets
+          p The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
+      a(href="#").post-item
+        figure.post-image
+          img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
+        span.post-overlay
+          h2 The Secret Live  of Pets
+          p The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
+
+      .post-section
+        p Aclamadas por la crítica
+
+      a(href="#").post-item
+        figure.post-image
+          img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
+        span.post-overlay
+          h2 The Secret Live  of Pets
+          p The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
+      a(href="#").post-item
+        figure.post-image
+          img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
+        span.post-overlay
+          h2 The Secret Live  of Pets
+          p The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
+      a(href="#").post-item
+        figure.post-image
+          img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
+        span.post-overlay
+          h2 The Secret Live  of Pets
+          p The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
+
+      .post-section
+        p No te debes perder
+
+      a(href="#").post-item
+        figure.post-image
+          img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
+        span.post-overlay
+          h2 The Secret Live  of Pets
+          p The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
+      a(href="#").post-item
+        figure.post-image
+          img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
+        span.post-overlay
+          h2 The Secret Live  of Pets
+          p The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
+      a(href="#").post-item
+        figure.post-image
+          img(src="src/images/The-Secret-Life-of-Pets-trailer.jpg")
+        span.post-overlay
+          h2 The Secret Live  of Pets
+          p The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.
