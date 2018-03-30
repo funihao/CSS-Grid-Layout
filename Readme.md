@@ -302,11 +302,11 @@ En la lección anterior hemos jugado con la alineación del contenido dentro de 
 # Desafíos
 Se plantean dos desafíos a maquetar mediante _*CSS-Grid*_. En la carpeta de desafíos se encuentran las maquetaciones en formato imagen _'jpg'_.
 
-## Movie.es
+## [Movie.es](https://github.com/funihao/CSS-Grid-Layout/tree/movies)
 La siguiente imagen muestra el aspecto a conseguir. Adicionalmente he realizado la modificación de los menus para un comportamiento responsivo, usando el mínimo javascript y con el apoyo de _*JQuery*_.
 
 <div align="center">
-  <a href="src/desafios/movi_es.jpg">
+  <a href="https://github.com/funihao/CSS-Grid-Layout/tree/movies">
     <img width="300" align="center" src="src/desafios/movi_es.jpg">
   </a>
   <br>
